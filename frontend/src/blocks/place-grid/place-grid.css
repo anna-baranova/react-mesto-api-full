@@ -1,0 +1,10 @@
+.place-grid{
+    margin: 51px auto 67px auto;
+}
+
+@media screen and (max-width: 879px) {
+    .place-grid{
+        width: calc(100% - 19px*2);
+        margin: 36px auto 48px auto;
+    }
+}

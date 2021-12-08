@@ -1,0 +1,18 @@
+.place-grid__delete{
+    background: none;
+    background-image: url(../../../images/place-grid__delete.svg);
+    background-position: center;
+    width: 18px;
+    height: 19px;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 18px;
+    right: 15px;
+}
+
+.place-grid__delete:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+

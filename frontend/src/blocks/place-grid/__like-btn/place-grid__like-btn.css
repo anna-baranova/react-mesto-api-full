@@ -1,0 +1,14 @@
+.place-grid__like-btn{
+    background: none;
+    background-image: url(../../../images/place-grid__like.svg);
+    background-position: center;
+    width: 22px;
+    height: 19px;
+    border: none;
+    outline: none;
+}
+
+.place-grid__like-btn:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}

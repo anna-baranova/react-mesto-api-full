@@ -1,0 +1,26 @@
+.header__menu-btn{
+  background-image: url(../../../images/header__menu.svg);
+  width: 24px;
+  height: 27px;
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.header__menu-btn:hover{
+  opacity: 0.6;
+}
+
+.header__menu-btn:focus{
+  outline: none;
+}
+
+@media screen and (max-width: 639px){
+  .header__menu-btn{
+      display: block;
+      margin-right: 30px;
+  }
+}

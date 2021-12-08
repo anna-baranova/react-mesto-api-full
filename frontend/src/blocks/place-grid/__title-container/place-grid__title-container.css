@@ -1,0 +1,13 @@
+.place-grid__title-container{
+    align-items: center;
+    margin: 25px 15px 31px 21px;
+    display: grid;
+    grid-template-columns: 1fr 22px;
+    gap: 30px;
+}
+
+@media screen and (max-width: 639px) {
+    .place-grid__title-container{
+        margin: 21px 15px 27px 21px;
+    }
+}

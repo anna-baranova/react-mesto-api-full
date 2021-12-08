@@ -1,0 +1,25 @@
+.header__logout-link{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #A9A9A9;
+    margin-left: 24px;
+}
+
+.header__logout-link:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 639px){
+    .header__logout-link{
+        margin-right: 30px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+
+

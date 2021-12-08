@@ -1,0 +1,9 @@
+.header__menu_visible{
+  display: none;
+}
+
+@media screen and (max-width: 639px){
+  .header__menu_visible{
+      display: flex;
+  }
+}

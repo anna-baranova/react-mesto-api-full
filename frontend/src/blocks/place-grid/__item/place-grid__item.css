@@ -1,0 +1,14 @@
+.place-grid__item{
+    width: 282px;
+    height: 282px;
+    border-radius: 10px 10px 0px 0px;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media screen and (max-width: 879px) {
+    .place-grid__item{
+        max-width: none;
+        width: 100%;
+    }
+}

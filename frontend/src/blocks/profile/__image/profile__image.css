@@ -1,0 +1,26 @@
+.profile__image{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 30px;
+    cursor: url(../../../images/avatar__cursor.svg), pointer;
+}
+
+.profile__image:hover{
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 879px) {
+    .profile__image{
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .profile__image{
+        justify-self: center;
+    }
+}

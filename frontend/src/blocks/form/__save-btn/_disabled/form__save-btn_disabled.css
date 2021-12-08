@@ -1,0 +1,27 @@
+.form__save-btn_disabled{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #C4C4C4;
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 18px;
+    outline: none;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    border-radius: 2px;
+}
+
+.form__save-btn_disabled:hover{
+    cursor: unset;
+}
+
+@media screen and (max-width: 879px) {
+    .form__save-btn_disabled{
+        padding-top: 10px;
+        padding-bottom: 14px;
+        font-size: 14px;
+        line-height: 1.21;
+    }
+}
