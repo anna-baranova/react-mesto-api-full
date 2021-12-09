@@ -119,7 +119,7 @@ const api = new Api({
     // baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-24',
     baseUrl: 'https://back.mestoproject.nomoredomains.rocks',
     // token: 'c7246450-eb40-44a5-8abb-048e9d2f61cc'
-    token:`Bearer ${localStorage.getItem('token')}`
+    token:`Bearer ${localStorage.getItem("jwt")}`
   })
 
 export default api;
