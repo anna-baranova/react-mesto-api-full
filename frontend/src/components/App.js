@@ -132,7 +132,7 @@ function App() {
     authApi(password, email, 'signin')
       .then((res) => {
         if (res.token) {
-          console.log(res.token)
+          // console.log(res.token)
     //      setIsTooltipPopupOpen(true);
           localStorage.setItem("jwt", res.token);
           setLoggedIn(true);
