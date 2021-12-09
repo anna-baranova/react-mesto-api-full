@@ -2,6 +2,7 @@ const express = require('express');
 
 const app = express();
 const mongoose = require('mongoose');
+const cors = require('cors');
 const { celebrate, Joi, errors } = require('celebrate');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const userRouter = require('./routes/users');
@@ -20,6 +21,18 @@ mongoose.connect('mongodb://localhost:27017/mestodb', {
   // useFindAndModify: false,
   useUnifiedTopology: true,
 });
+
+app.use(cors({
+  origin: [
+    'https://mestoproject.nomoredomains.work',
+    'http://mestoproject.nomoredomains.work',
+    // 'http://localhost:3001',
+  ],
+  methods: ['GET', 'PUT', 'POST', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  optionsSuccessStatus: 200,
+  credentials: true,
+}));
 
 app.use(express.json());
 app.use(requestLogger); // подключаем логгер запросов
@@ -63,5 +76,5 @@ app.use(errors()); // обработчик ошибок celebrate
 app.use(serverError); // централизованный обработчик ошибок
 
 app.listen(PORT, () => {
-  // console.log(`Server is running on PORT ${PORT}`);
+  console.log(`Server is running on PORT ${PORT}`);
 });
