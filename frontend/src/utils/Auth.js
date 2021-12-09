@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://back.mestoproject.nomoredomains.rocks';
+export const BASE_URL = 'https://back.mestoproject.nomoredomains.rocks';
 
 // Регистрация / авторизация пользователя
 const authApi = (password, email, path) => {
