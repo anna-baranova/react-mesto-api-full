@@ -2,6 +2,7 @@ const express = require('express');
 
 const app = express();
 const mongoose = require('mongoose');
+const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const { celebrate, Joi, errors } = require('celebrate');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
@@ -21,6 +22,8 @@ mongoose.connect('mongodb://localhost:27017/mestodb', {
   // useFindAndModify: false,
   useUnifiedTopology: true,
 });
+
+app.use(cookieParser());
 
 app.use(cors({
   origin: [
