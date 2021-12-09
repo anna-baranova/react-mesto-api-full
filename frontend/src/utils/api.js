@@ -10,7 +10,8 @@ class Api {
 
     getUserData() {
         return fetch (`${this._baseUrl}/users/me`, {
-            headers: {authorization: this._token}
+            headers: {authorization: this._token},
+            credentials: 'include',
         })
         .then(res => this._getResponseData(res))
     }    
@@ -19,7 +20,8 @@ class Api {
         return fetch (`${this._baseUrl}/cards`, {
             headers: {
                 authorization: this._token
-            }
+            },
+            credentials: 'include',
         })
         .then(res => this._getResponseData(res))
     };
@@ -31,6 +33,7 @@ class Api {
                 authorization: this._token,
                 'Content-Type': 'application/json'
             },
+            credentials: 'include',
             body: JSON.stringify({
                 name: data.name,
                 about: data.about
@@ -46,6 +49,7 @@ class Api {
                 authorization: this._token,
                 'Content-Type': 'application/json'
             },
+            credentials: 'include',
             body: JSON.stringify({
                 avatar: data.avatar
             })
@@ -60,6 +64,7 @@ class Api {
                 authorization: this._token,
                 'Content-Type': 'application/json'
             },
+            credentials: 'include',
             body: JSON.stringify({
                 name: data.name,
                 link: data.link
@@ -73,7 +78,8 @@ class Api {
             method: 'DELETE',
             headers: {
                 authorization: this._token
-            }
+            },
+            credentials: 'include',
         })
         .then(res => this._getResponseData(res))
     }
@@ -84,7 +90,8 @@ class Api {
             method: 'PUT',
             headers: {
                 authorization: this._token
-            }
+            },
+            credentials: 'include',
         })
         .then(res => this._getResponseData(res))
     } else {
@@ -92,7 +99,8 @@ class Api {
             method: 'DELETE',
             headers: {
                 authorization: this._token
-            }
+            },
+            credentials: 'include',
         })
         .then(res => this._getResponseData(res))
         }

@@ -8,6 +8,7 @@ const authApi = (password, email, path) => {
       Accept: "application/json",
       "Content-Type": "application/json",
     },
+    credentials: 'include',
     body: JSON.stringify({ password, email }),
   }).then((res) => {
     if (res.status === 200 || res.status === 201) {
@@ -24,6 +25,7 @@ const authApiToken = (token) => {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
+    credentials: 'include',
   }).then((res) => {
     if (res.status === 200) {
       return res.json();
