@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://auth.nomoreparties.co';
+export const BASE_URL = 'mestoproject.nomoredomains.work/';
 
 // Регистрация / авторизация пользователя
 const authApi = (password, email, path) => {
