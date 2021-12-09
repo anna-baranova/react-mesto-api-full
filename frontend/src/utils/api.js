@@ -109,7 +109,7 @@ class Api {
 
 const api = new Api({
     // baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-24',
-    baseUrl: 'mestoproject.nomoredomains.work/',
+    baseUrl: 'back.mestoproject.nomoredomains.rocks',
     // token: 'c7246450-eb40-44a5-8abb-048e9d2f61cc'
     token:`Bearer ${localStorage.getItem('token')}`
   })
