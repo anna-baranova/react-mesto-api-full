@@ -131,6 +131,7 @@ function App() {
     setIsRegistrationOk(true);
     authApi(password, email, 'signin')
       .then((res) => {
+        console.log("1", res)
         if (res.token) {
           console.log(res.token)
     //      setIsTooltipPopupOpen(true);
