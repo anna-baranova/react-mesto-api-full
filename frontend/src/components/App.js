@@ -136,7 +136,7 @@ function App() {
     //      setIsTooltipPopupOpen(true);
           localStorage.setItem("jwt", res.token);
           setLoggedIn(true);
-          history.push("/");
+          history.push("/sign-in");
         }
       })
       .catch((e) => {
@@ -168,6 +168,7 @@ function App() {
     if (localStorage.getItem("jwt")) {
       authApiToken(localStorage.getItem("jwt"))
         .then((res) => {
+          console.log(res)
           if (res.data) {
             setHeaderEmail(res.data.email);
             setLoggedIn(true);
