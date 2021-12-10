@@ -31,7 +31,7 @@ app.use(cors({
     'http://mestoproject.nomoredomains.work',
     'http://localhost:3000',
   ],
-  methods: ['GET', 'PUT', 'POST', 'DELETE'],
+  methods: ['GET', 'PUT', 'POST', 'PATCH', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   optionsSuccessStatus: 200,
   credentials: true,
