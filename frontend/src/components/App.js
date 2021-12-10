@@ -131,7 +131,7 @@ function App() {
     setIsRegistrationOk(true);
     authApi(password, email, 'signin')
       .then((res) => {
-        console.log("login", res)
+        console.log("1", res)
         if (res.token) {
           console.log(res.token)
     //      setIsTooltipPopupOpen(true);
@@ -169,7 +169,7 @@ function App() {
     if (localStorage.getItem("jwt")) {
       authApiToken(localStorage.getItem("jwt"))
         .then((res) => {
-          console.log(res)
+          console.log("3", res)
           if (res) {
             setHeaderEmail(res.email);
             setLoggedIn(true);
