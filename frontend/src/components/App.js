@@ -136,7 +136,7 @@ function App() {
     //      setIsTooltipPopupOpen(true);
           localStorage.setItem("jwt", res.token);
           setLoggedIn(true);
-          history.push("/sign-in");
+          // history.push("/sign-in");
         }
       })
       .catch((e) => {
