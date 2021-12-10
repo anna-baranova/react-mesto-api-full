@@ -169,9 +169,9 @@ function App() {
     if (localStorage.getItem("jwt")) {
       authApiToken(localStorage.getItem("jwt"))
         .then((res) => {
-          console.log(res)
-          if (res.data) {
-            setHeaderEmail(res.data.email);
+          console.log("3", res)
+          if (res) {
+            setHeaderEmail(res.email);
             setLoggedIn(true);
             history.push("/");
           }
