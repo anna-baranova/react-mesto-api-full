@@ -104,7 +104,7 @@ const login = (req, res, next) => {
         sameSite: 'None',
         secure: true,
       })
-        .status(200).send({ message: 'Вы успешно авторизовались' });
+        .status(200).send(token, { message: 'Вы успешно авторизовались' });
     })
     .catch(() => {
       throw new UnauthorizedError('Необходима авторизация');
