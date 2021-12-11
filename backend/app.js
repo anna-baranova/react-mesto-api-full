@@ -9,7 +9,7 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 const userRouter = require('./routes/users');
 const cardRouter = require('./routes/cards');
 
-const { createUser, login } = require('./controllers/users');
+const { createUser, login, logout } = require('./controllers/users');
 const auth = require('./middlewares/auth');
 const serverError = require('./middlewares/serverError');
 const NotFoundError = require('./errors/not-found-error');
@@ -64,6 +64,7 @@ app.post(
   }),
   createUser,
 );
+app.get('/signout', logout);
 
 app.use(auth);
 

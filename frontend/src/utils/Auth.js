@@ -34,4 +34,19 @@ const authApiToken = (token) => {
   });
 };
 
-export {authApiToken, authApi};
+const logout = () => {
+  return fetch(`${BASE_URL}/signout`, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+    credentials: 'include',
+  })
+    .then((res) => {
+      if (res.status === 200) {
+        return res.json();
+      }
+      return Promise.reject(`Ошибка: ${res.status}`);
+    });
+};
+
+export {authApiToken, authApi, logout};

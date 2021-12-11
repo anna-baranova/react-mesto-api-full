@@ -112,6 +112,8 @@ const login = (req, res, next) => {
     .catch(next);
 };
 
+const logout = (req, res) => res.clearCookie('jwt').send({ message: 'Вы вышли из приложения' });
+
 const getCurrentUserInfo = (req, res, next) => {
   const userId = req.user._id;
   return User.findById(userId)
@@ -136,5 +138,6 @@ module.exports = {
   updateUserInfo,
   updateUserAvatar,
   login,
+  logout,
   getCurrentUserInfo,
 };
