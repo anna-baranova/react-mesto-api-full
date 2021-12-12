@@ -27,6 +27,8 @@ const getUser = (req, res, next) => User.findById(req.params.userId)
     }
     if (err.name === 'CastError') {
       throw new BadRequestError('Невалидный id');
+    } else {
+      next(err);
     }
   })
   .catch(next);
@@ -59,6 +61,8 @@ const createUser = (req, res, next) => {
             .catch((err) => {
               if (err.name === 'ValidationError') {
                 throw new BadRequestError('Введены некорректные данные');
+              } else {
+                next(err);
               }
             })
             .catch(next);
@@ -87,6 +91,8 @@ const updateUserAvatar = (req, res, next) => {
     .catch((err) => {
       if (err.name === 'ValidationError') {
         throw new BadRequestError('Введены некорректные данные');
+      } else {
+        next(err);
       }
     })
     .catch(next);
@@ -130,6 +136,8 @@ const getCurrentUserInfo = (req, res, next) => {
     .catch((err) => {
       if (err.name === 'CastError') {
         throw new BadRequestError('Невалидный id');
+      } else {
+        next(err);
       }
     })
     .catch(next);
