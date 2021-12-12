@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const { celebrate, Joi, errors } = require('celebrate');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
+require('dotenv').config();
 const userRouter = require('./routes/users');
 const cardRouter = require('./routes/cards');
 
