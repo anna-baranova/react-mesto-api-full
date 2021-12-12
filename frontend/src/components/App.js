@@ -163,7 +163,7 @@ function App() {
         setCards(cardsData)
       })
       .catch(e => console.log(`Ошибка при получении дефолтных данных: ${e}`))
-    }, [])
+    }, [loggedIn])
 
 
   React.useEffect(() => {
