@@ -192,7 +192,6 @@ function App() {
     return () => document.removeEventListener('keydown', closeByEscape)
   }, [])
 
-
   return (
     <CurrentUserContext.Provider value={currentUser}>
     <div className="page">
