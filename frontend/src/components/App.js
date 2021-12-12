@@ -169,7 +169,7 @@ function App() {
         })
         .catch(e => console.log(`Ошибка при получении email пользователя: ${e}`));
     }
-  }, [loggedIn, headerEmail]);
+  }, [headerEmail]);
 
   React.useEffect(() => {
     api.getFullData()
@@ -178,7 +178,7 @@ function App() {
         setCards(cardsData)
       })
       .catch(e => console.log(`Ошибка при получении дефолтных данных: ${e}`))
-    }, [loggedIn, headerEmail])
+    }, [headerEmail])
 
   React.useEffect(() => {
     const closeByEscape = (e) => {
