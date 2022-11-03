@@ -165,20 +165,20 @@ function App() {
       .catch(e => console.log(`Ошибка при получении дефолтных данных: ${e}`))
     }, [])
 
-  React.useEffect(() => {
-    if (localStorage.getItem("jwt")) {
-      authApiToken(localStorage.getItem("jwt"))
-        .then((res) => {
-          console.log("3", res)
-          if (res) {
-            setHeaderEmail(res.email);
-            setLoggedIn(true);
-            history.push("/");
-          }
-        })
-        .catch(e => console.log(`Ошибка при получении email пользователя: ${e}`));
-    }
-  }, [loggedIn]);
+  // React.useEffect(() => {
+  //   if (localStorage.getItem("jwt")) {
+  //     authApiToken(localStorage.getItem("jwt"))
+  //       .then((res) => {
+  //         console.log("3", res)
+  //         if (res) {
+  //           setHeaderEmail(res.email);
+  //           setLoggedIn(true);
+  //           history.push("/");
+  //         }
+  //       })
+  //       .catch(e => console.log(`Ошибка при получении email пользователя: ${e}`));
+  //   }
+  // }, [loggedIn]);
 
   React.useEffect(() => {
     const closeByEscape = (e) => {
